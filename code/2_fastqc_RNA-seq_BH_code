@@ -1,0 +1,26 @@
+
+#!/bin/bash -l
+#SBATCH -A g2021012
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 03:00:00
+#SBATCH -J fastqc_RNA_BH
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lotta.rydin@telia.com
+
+# Load modules
+module load bioinfo-tools
+
+# Your commands
+fastqc -o ~/GenomeAnalysis_project/analyses/2_fastqc_RNA-seq_BH -f fastq \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797972_pass_1.fastq.gz \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797972_pass_2.fastq.gz 
+
+fastqc -o ~/GenomeAnalysis_project/analyses/2_fastqc_RNA-seq_BH -f fastq -c \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797973_pass_1.fastq.gz \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797973_pass_2.fastq.gz
+
+fastqc -o ~/GenomeAnalysis_project/analyses/2_fastqc_RNA-seq_BH -f fastq -c \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797974_pass_1.fastq.gz \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797974_pass_2.fastq.gz 
