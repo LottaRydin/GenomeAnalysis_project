@@ -14,13 +14,13 @@ module load bioinfo-tools
 
 # Your commands
 fastqc -o ~/GenomeAnalysis_project/analyses/2_fastqc_RNA-seq_BH -f fastq \
-~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797972_pass_1.fastq.gz \
-~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797972_pass_2.fastq.gz 
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797972_pass_1.fastq.gz \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797972_pass_2.fastq.gz 
 
 fastqc -o ~/GenomeAnalysis_project/analyses/2_fastqc_RNA-seq_BH -f fastq -c \
-~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797973_pass_1.fastq.gz \
-~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797973_pass_2.fastq.gz
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797973_pass_1.fastq.gz \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797973_pass_2.fastq.gz
 
 fastqc -o ~/GenomeAnalysis_project/analyses/2_fastqc_RNA-seq_BH -f fastq -c \
-~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797974_pass_1.fastq.gz \
-~/GenomeAnalysis_project/raw_data/transcriptomics_data/trim_paired_ERR1797974_pass_2.fastq.gz 
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797974_pass_1.fastq.gz \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_BH/trim_paired_ERR1797974_pass_2.fastq.gz 

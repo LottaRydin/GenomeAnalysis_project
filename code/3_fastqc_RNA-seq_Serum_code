@@ -1,0 +1,25 @@
+#!/bin/bash -l
+#SBATCH -A g2021012
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 03:00:00
+#SBATCH -J fastqc_RNA_Serum
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lotta.rydin@telia.com
+
+# Load modules
+module load bioinfo-tools
+
+# Your commands
+fastqc -o ~/GenomeAnalysis_project/analyses/3_fastqc_RNA-seq_Serum -f fastq \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797969_pass_1.fastq.gz \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797969_pass_2.fastq.gz 
+
+fastqc -o ~/GenomeAnalysis_project/analyses/3_fastqc_RNA-seq_Serum -f fastq -c \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797970_pass_1.fastq.gz \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797970_pass_2.fastq.gz
+
+fastqc -o ~/GenomeAnalysis_project/analyses/3_fastqc_RNA-seq_Serum -f fastq -c \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797971_pass_1.fastq.gz \
+~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR1797971_pass_2.fastq.gz 
