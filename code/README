@@ -1,0 +1,8 @@
+# Dowmnload reference genome:
+ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/010/120/755/GCF_010120755.1_ASM1012075v1/GCF_010120755.1_ASM1012075v1_genomic.fna.gz
+ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/010/120/755/GCF_010120755.1_ASM1012075v1/GCF_010120755.1_ASM1012075v1_genomic.gff.gz
+
+# Download faecalis for synteny search
+ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/393/015/GCF_000393015.1_Ente_faec_T5_V1/GCF_000393015.1_Ente_faec_T5_V1_genomic.fna.gz
+ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/393/015/GCF_000393015.1_Ente_faec_T5_V1/GCF_000393015.1_Ente_faec_T5_V1_genomic.gff.gz
+
