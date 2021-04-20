@@ -19,4 +19,4 @@ PE ~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_BH/trim_paired
 ~/GenomeAnalysis_project/analyses/7_trimmomatic_trimming/output_forward_unpaired_ERR1797972.fq.gz \
 ~/GenomeAnalysis_project/analyses/7_trimmomatic_trimming/output_reverse_paired_ERR1797972.fq.gz \
 ~/GenomeAnalysis_project/analyses/7_trimmomatic_trimming/output_reverse_unpaired_ERR1797972.fq.gz \
-ILLUMINACLIP:/sw/apps/bioinfo/trimmomatic/0.36/rackham/adapters/TruSeq3-PE.fa:2:36:10:2:keepBothReads LEADING:3 TRAILING:3 MINLEN:36
+ILLUMINACLIP:/sw/apps/bioinfo/trimmomatic/0.36/rackham/adapters/TruSeq3-PE.fa:2:30:10:2:keepBothReads LEADING:36 TRAILING:36 MINLEN:36

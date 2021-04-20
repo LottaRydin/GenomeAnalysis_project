@@ -1,0 +1,19 @@
+#!/bin/bash -l
+
+#SBATCH -A g2021012
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 03:00:00
+#SBATCH -J fastqc_RNA_BH
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lotta.rydin@telia.com
+
+# Load modules
+module load bioinfo-tools
+module load FastQC/0.11.9
+
+# Your commands
+fastqc -o ~/GenomeAnalysis_project/analyses/7_trimmomatic_trimming -f fastq \
+~/GenomeAnalysis_project/analyses/7_trimmomatic_trimming/output_forward_paired_ERR1797972.fq.gz \
+~/GenomeAnalysis_project/analyses/7_trimmomatic_trimming/output_reverse_paired_ERR1797972.fq.gz
