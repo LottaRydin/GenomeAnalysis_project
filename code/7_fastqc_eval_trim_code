@@ -5,7 +5,7 @@
 #SBATCH -p core
 #SBATCH -n 1
 #SBATCH -t 03:00:00
-#SBATCH -J fastqc_RNA_BH
+#SBATCH -J fastqc_trim
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user lotta.rydin@telia.com
 

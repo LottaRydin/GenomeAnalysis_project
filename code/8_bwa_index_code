@@ -1,0 +1,17 @@
+#!/bin/bash -l
+
+#SBATCH -A g2021012
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 01:00:00
+#SBATCH -J bwa_index_job
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lotta.rydin@telia.com
+
+# Load modules
+module load bioinfo-tools
+module load bwa
+
+# Indexing
+bwa index ~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta

@@ -1,0 +1,33 @@
+#!/bin/bash -l
+
+#SBATCH -A g2021012
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 05:00:00
+#SBATCH -J bwa_Serum_rna_alignment_job
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lotta.rydin@telia.com
+
+# Load modules
+module load bioinfo-tools
+module load bwa
+
+# Alignment for Serum
+for i in {69..71}
+do
+	bwa aln ~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta \
+	~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR17979${i}_pass_1.fastq.gz \
+	> ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/aln_Serum/aln_ERR17979${i}_pass_1.sai
+
+	bwa aln ~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta \
+	~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR17979${i}_pass_2.fastq.gz \
+	> ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/aln_Serum/aln_ERR17979${i}_pass_2.sai
+
+	bwa sampe ~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta \
+	~/GenomeAnalysis_project/analyses/8_bwa_rna_align/aln_Serum/aln_ERR17979${i}_pass_1.sai \
+	~/GenomeAnalysis_project/analyses/8_bwa_rna_align/aln_Serum/aln_ERR17979${i}_pass_2.sai \
+	~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR17979${i}_pass_1.fastq.gz \
+	~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR17979${i}_pass_2.fastq.gz \
+	> ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_Serum/aln-pe_ERR17979${i}.sam
+done
