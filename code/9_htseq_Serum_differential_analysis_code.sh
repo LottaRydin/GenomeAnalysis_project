@@ -19,6 +19,6 @@ for f in ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_Serum/*.bam
     samtools index $f ${f}.bai
 done
 
-htseq-count -f bam -r pos -o ~/GenomeAnalysis_project/analyses/9_htseq_differential_analysis/Serum_htseq_output.bam\
+htseq-count -f bam -r pos -o ~/GenomeAnalysis_project/analyses/9_htseq_differential_analysis \
 ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_Serum/*.bam \
 /GenomeAnalysis_project/analyses/5_prokka_annotation/annotation_trimmed.gff \
