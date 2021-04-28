@@ -37,5 +37,5 @@ do
 	~/GenomeAnalysis_project/analyses/8_bwa_rna_align/aln_Serum/aln_ERR17979${i}_pass_2.sai \
 	~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR17979${i}_pass_1.fastq.gz \
 	~/GenomeAnalysis_project/raw_data/transcriptomics_data/RNA-Seq_Serum/trim_paired_ERR17979${i}_pass_2.fastq.gz \
-	| samtools sort -o ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_Serum/aln-pe_ERR17979${i}.sam
+	| samtools sort -o ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_Serum/aln-pe_ERR17979${i}.bam
 done
