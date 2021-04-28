@@ -15,11 +15,11 @@ module load samtools
 module load htseq
 
 # commands:
-for f in ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_BH/aln*
+for f in ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_BH/*.bam
     samtools index $f ${f}.bai
 done
 
 htseq-count -f bam -r pos -o ~/GenomeAnalysis_project/analyses/9_htseq_differential_analysis/BH_htseq_output.bam\
-~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_BH/aln* \
+~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_BH/*.bam \
 ~/GenomeAnalysis_project/analyses/5_prokka_annotation/annotation_trimmed.gff \
 
