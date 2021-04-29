@@ -21,7 +21,7 @@ module load htseq
 # done
 
 
-htseq-count -f bam -r pos -i ID -t CDS\
+htseq-count -f bam -r pos -i ID -t CDS \
 ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_BH/*.bam \
 ~/GenomeAnalysis_project/analyses/5_prokka_annotation/annotation_trimmed.gff \
 > ~/GenomeAnalysis_project/analyses/9_htseq_differential_analysis/bh_htseq_res.txt
