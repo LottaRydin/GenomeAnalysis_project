@@ -16,6 +16,7 @@ module load htseq
 
 # commands:
 for f in ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_Serum/*.bam
+do
     samtools index $f ${f}.bai
 done
 
