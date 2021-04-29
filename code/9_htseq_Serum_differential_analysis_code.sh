@@ -24,4 +24,4 @@ cd ~/GenomeAnalysis_project/analyses/9_htseq_differential_analysis
 
 htseq-count -f bam -r pos \
 ~/GenomeAnalysis_project/analyses/8_bwa_rna_align/sampe_Serum/*.bam \
-/GenomeAnalysis_project/analyses/5_prokka_annotation/annotation_trimmed.gff \
+~/GenomeAnalysis_project/analyses/5_prokka_annotation/annotation_trimmed.gff \
