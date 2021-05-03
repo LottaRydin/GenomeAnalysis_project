@@ -3,13 +3,17 @@ library("DESeq2")
 # Gathering data
 directory <- "~/GenomeAnalysis_project/analyses/9_htseq_differential_analysis/"
 sampleFiles <- c("bh_1.txt","bh_2.txt","bh_3.txt","se_1.txt","se_2.txt","se_3.txt")
+sampleName <- c("bh_1","bh_2","bh_3","se_1","se_2","se_3")
+condition <- c("bh", "bh", "bh", "se", "se", "se")
+
+phdata <- data.frame(sampleName, sampleFiles, condition)
 
 # Formatting data for input
-phdata<-data.frame(fname=sampleFiles,stringsAsFactors=FALSE)
-phdata <- phdata %>% transmute(sample=substr(fname,1,4),fname)
+#phdata<-data.frame(fname=sampleFiles,stringsAsFactors=FALSE)
+# phdata <- phdata %>% transmute(sample=substr(fname,1,4),fname)
 
-phdata <- phdata %>% mutate(condition=as.factor(substr(sample,1,2)),
-                           repl=substr(sample,4,4))
+# phdata <- phdata %>% mutate(condition=as.factor(substr(sample,1,2)),
+#                            repl=substr(sample,4,4))
 
 # Running DESeq2
 dds<-DESeqDataSetFromHTSeqCount(sampleTable=phdata,directory=datadir,design=~ condition)
