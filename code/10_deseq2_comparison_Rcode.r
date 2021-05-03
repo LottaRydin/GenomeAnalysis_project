@@ -1,7 +1,7 @@
 library("DESeq2")
 
 # Gathering data
-directory <- "~/GenomeAnalysis_project/analyses/9_htseq_differential_analysis/"
+datadir <- "~/GenomeAnalysis_project/analyses/9_htseq_differential_analysis/"
 sampleFiles <- c("bh_1.txt","bh_2.txt","bh_3.txt","se_1.txt","se_2.txt","se_3.txt")
 sampleName <- c("bh_1","bh_2","bh_3","se_1","se_2","se_3")
 condition <- c("bh", "bh", "bh", "se", "se", "se")
@@ -38,3 +38,4 @@ write.csv(as.data.frame(sort_resp05fc1), file="~/GenomeAnalysis_project/analyses
 
 
 #http://people.duke.edu/~ccc14/duke-hts-2017/Statistics/08032017/DESeq2-Notebook-introduction.html
+#source("~/GenomeAnalysis_project/code/10_deseq2_comparison_Rcode.r", echo=TRUE)
