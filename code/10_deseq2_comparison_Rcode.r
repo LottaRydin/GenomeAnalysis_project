@@ -30,10 +30,14 @@ png("~/GenomeAnalysis_project/analyses/10_deseq2_comparison/vulcanoplot.png")
 plot(myres$log2FoldChange,-log10(myres$pvalue),pch=19,cex=0.3,xlab="Log2 FC",ylab="-log10(P-value)",col=ifelse(myres$padj<0.05&abs(myres$log2FoldChange)>1,"red","black"))
 dev.off()
 
+png("~/GenomeAnalysis_project/analyses/10_deseq2_comparison/MAplot.png")
+plotMA(myres, alpha = 0.05, ylim=c(-5,5))
+dev.off()
+
 # Filtering and sorting
 resp05fc1 <- subset(myres,pvalue<0.05&abs(log2FoldChange)>1) # 49 To get the list of genes with unadjusted P-values < 0.05 and absolute log2 FC of more than 2
 write.csv(as.data.frame(resp05fc1), file="~/GenomeAnalysis_project/analyses/10_deseq2_comparison/resp05fc1.csv")
-sort_resp05fc1 <- myres[order(myres[["log2FoldChange"]]),]
+sort_resp05fc1 <- resp05fc1[order(resp05fc1[["log2FoldChange"]]),]
 write.csv(as.data.frame(sort_resp05fc1), file="~/GenomeAnalysis_project/analyses/10_deseq2_comparison/sort_resp05fc1.csv")
 
 
