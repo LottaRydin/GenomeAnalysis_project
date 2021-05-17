@@ -19,4 +19,6 @@ mummer -mum -b -c ~/GenomeAnalysis_project/raw_data/ref_genome/GCF_010120755.1_A
 ~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta \
 > ~/GenomeAnalysis_project/analyses/11_mummerplot_genome_evaluation/ref_qry.mums
 
-mummerplot --png --prefix=ref_qry ~/GenomeAnalysis_project/analyses/11_mummerplot_genome_evaluation/ref_qry.mums
+mummerplot -R ~/GenomeAnalysis_project/raw_data/ref_genome/GCF_010120755.1_ASM1012075v1_genomic.fna \
+-Q ~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta \
+--png --prefix=ref_qry ~/GenomeAnalysis_project/analyses/11_mummerplot_genome_evaluation/ref_qry.mums
