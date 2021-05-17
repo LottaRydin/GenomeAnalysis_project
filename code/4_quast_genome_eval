@@ -12,4 +12,14 @@
 module load bioinfo-tools
 module load quast
 
-quast.py -o ~/GenomeAnalysis_project/analyses/4_quast_genome_eval/ -R ~/GenomeAnalysis_project/raw_data/ref_genome/GCF_010120755.1_ASM1012075v1_genomic.fna.gz -G ~/GenomeAnalysis_project/raw_data/ref_genome/GCF_010120755.1_ASM1012075v1_genomic.gff ~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta
+# # Wrong reference
+# quast.py -o ~/GenomeAnalysis_project/analyses/4_quast_genome_eval/ \
+# -R ~/GenomeAnalysis_project/raw_data/ref_genome/GCF_010120755.1_ASM1012075v1_genomic.fna.gz \
+# -G ~/GenomeAnalysis_project/raw_data/ref_genome/GCF_010120755.1_ASM1012075v1_genomic.gff \
+# ~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta
+
+# Correct reference
+quast.py -o ~/GenomeAnalysis_project/analyses/4_quast_genome_eval/ \
+-R ~/GenomeAnalysis_project/raw_data/ref_genome/GCA_001750885.1_ASM175088v1_genomic.fna.gz \
+-G ~/GenomeAnalysis_project/raw_data/ref_genome/GCA_001750885.1_ASM175088v1_genomic.gff \
+~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta
