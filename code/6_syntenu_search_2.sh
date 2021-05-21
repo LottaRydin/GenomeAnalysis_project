@@ -16,4 +16,4 @@ module load blast
 # Commands
 blastn -outfmt 6 -query ~/GenomeAnalysis_project/analyses/1_genome_assembly_res/genome_assembly.contigs.fasta \
 -subject ~/GenomeAnalysis_project/raw_data/synteny_faecalis/GCF_000393015.1_Ente_faec_T5_V1_genomic.fna \
--out ~/GenomeAnalysis_project/analyses/6_synteny_search/synteny_faecelis_res
+-out ~/GenomeAnalysis_project/analyses/6_synteny_search/synteny_faecelis_res_2
