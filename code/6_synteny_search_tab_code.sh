@@ -1,4 +1,3 @@
-
 #!/bin/bash -l
 #SBATCH -A g2021012
 #SBATCH -M snowy
